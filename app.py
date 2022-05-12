@@ -11,16 +11,15 @@ import streamlit as st
 st.title("Welcome to Dashboard : Score loan")
 st.write("Visualisation des données sur l'ensemble du dataset")
 
+st.write("Distribution des variables")
+
+st.image('./plot/distrib.png')
+
+st.write("Répartition de la target")
+
+st.image('./plot/target_01.png') 
+st.image('./plot/target_02.png')
+st.image('./plot/target_03.png')
+
 st.image('./plot/pie_plot.png')
 
-
-
-
-
-
-selectbox = st.sidebar.selectbox(
-    "Select Customers ID",
-    ["Yes", "No"]
-)
-
-st.write(f"You selected {selectbox}")
