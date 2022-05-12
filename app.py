@@ -6,7 +6,6 @@ Created on Wed May 11 10:05:45 2022
 """
 
 import os
-import pickle
 import streamlit as st
 
 
@@ -14,7 +13,7 @@ MODEL_DIR = os.path.join(os.path.dirname('__file__'), 'model.pkl')
 if not os.path.isdir(MODEL_DIR):
     os.system('runipy notebook_model.ipynb')
 
-model = pickle.load(open("model.pkl","rb"))
+#model = pickle.load(open("model.pkl","rb"))
 #model = load_model('model.pkl')
 
 st.title("Welcome to Dashboard : Score loan")
