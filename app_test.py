@@ -9,10 +9,9 @@ import streamlit as st
 
 st.title("Welcome to Dashboard : Score loan")
 
-selectbox = st.sidebar.selectbox(
-    "Select yes or no",
-    ["Yes", "No"])
+selectbox = st.sidebar(
+    st.image('./plot/pie_plot.png')
+)
 
-st.image('./plot/pie_plot.png')
 
 st.write(f"You selected {selectbox}")
