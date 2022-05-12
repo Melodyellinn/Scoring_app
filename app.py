@@ -5,23 +5,18 @@ Created on Wed May 11 10:05:45 2022
 @author: Simplon
 """
 
-#import os
+
 import streamlit as st
 
-
-st.image('./pie_plot.png')
-
-
-
-
-#MODEL_DIR = os.path.join(os.path.dirname('__file__'), 'model.pkl')
-#if not os.path.isdir(MODEL_DIR):
-#    os.system('runipy notebook_model.ipynb')
-
-#model = pickle.load(open("model.pkl","rb"))
-#model = load_model('model.pkl')
-
 st.title("Welcome to Dashboard : Score loan")
+st.write("Visualisation des données sur l'ensemble du dataset")
+
+st.image('./plot/pie_plot.png')
+
+
+
+
+
 
 selectbox = st.sidebar.selectbox(
     "Select Customers ID",
