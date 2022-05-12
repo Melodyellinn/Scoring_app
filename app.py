@@ -41,7 +41,7 @@ class StreamlitApp:
         cols = [col for col in features.columns]
 
         st.sidebar.markdown(
-            '<p class="header-style">Iris Data Classification</p>',
+            '<p class="header-style">Iris Data Classificationcoucou</p>',
             unsafe_allow_html=True
         )
         sepal_length = st.sidebar.selectbox(
