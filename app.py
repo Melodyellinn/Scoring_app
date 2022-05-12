@@ -9,9 +9,6 @@ Created on Wed May 11 10:05:45 2022
 import streamlit as st
 
 
-st.dataframe('data_categ.csv')
-
-
 st.image('./pie_plot.png')
 
 
