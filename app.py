@@ -10,6 +10,7 @@ import os
 import os.path
 import pickle
 import streamlit as st
+from sklearn import *
 from sklearn.model_selection import train_test_split
 import imblearn
 import joblib
