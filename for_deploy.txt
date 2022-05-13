@@ -1,23 +1,13 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed May 11 10:05:45 2022
-
-@author: Simplon
-"""
-
-import pandas as pd
 import os
 import os.path
 import pickle
 import streamlit as st
 from sklearn.model_selection import train_test_split
 
-with open('file/data/application_train.csv'
-          , 'rb') as data:
-    df= pd.read_csv(data)
-
-with open('file/model.pkl',
-          'rb') as handle:
+df = os.path.join(os.path.dirname('__file__'), 'application_train.csv')
+    
+MODEL_DIR = os.path.join(os.path.dirname('file'), 'model.pkl')
+with open(MODEL_DIR , 'rb') as handle:
     model = pickle.load(handle)
 
 ###### DROP MISSING VALUES ######
@@ -50,4 +40,3 @@ st.image('./plot/target_02.png')
 st.image('./plot/target_03.png')
 
 st.image('./plot/pie_plot.png')
-
