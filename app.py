@@ -12,11 +12,11 @@ import pickle
 import streamlit as st
 from sklearn.model_selection import train_test_split
 
-path = os.path.join(os.getcwd(), r'data\application_train_light.csv')
+path = os.path.join(os.getcwd(), r'data\application_train_light.csv').replace("\\",'/')
 # print(path, 'BLOOOOOOOOOOOOOP')
 df = pd.read_csv(path)
 
-MODEL_DIR = os.path.join(os.getcwd(), r'model.pkl')
+MODEL_DIR = os.path.join(os.getcwd(), r'model.pkl').replace("\\",'/')
 # print(MODEL_DIR, 'BLAAAAAAAAAP')
 with open(MODEL_DIR , 'rb') as handle:
     model = pickle.load(handle)
