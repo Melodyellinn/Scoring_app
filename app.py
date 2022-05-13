@@ -12,7 +12,7 @@ import pickle
 import streamlit as st
 from sklearn.model_selection import train_test_split
 
-path = os.path.join(os.path.abspath(__file__), r'..\data\application_train.csv')
+path = os.path.join(os.getcwd(), r'..\data\application_train.csv')
 print(path, 'BLOOOOOOOOOOOOOP')
 df = pd.read_csv(path)
 
