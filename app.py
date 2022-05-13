@@ -12,12 +12,12 @@ import pickle
 import streamlit as st
 from sklearn.model_selection import train_test_split
 
-with open('file/data/application_train.csv'
-          , 'rb') as data:
-    df= pd.read_csv(data)
+path = os.path.join(os.path.abspath(__file__), r'..\data\application_train.csv')
+print(path, 'BLOOOOOOOOOOOOOP')
+df = pd.read_csv(path)
 
-with open('file/model.pkl',
-          'rb') as handle:
+MODEL_DIR = os.path.join(os.getcwd(), r'model.pkl')
+with open(MODEL_DIR , 'rb') as handle:
     model = pickle.load(handle)
 
 ###### DROP MISSING VALUES ######
@@ -50,4 +50,3 @@ st.image('./plot/target_02.png')
 st.image('./plot/target_03.png')
 
 st.image('./plot/pie_plot.png')
-
