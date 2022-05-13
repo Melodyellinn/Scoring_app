@@ -11,6 +11,7 @@ import os.path
 import pickle
 import streamlit as st
 from sklearn.model_selection import train_test_split
+import imblearn
 
 path = os.path.join(os.getcwd(), r'data\application_train_light.csv').replace("\\",'/')
 # print(path, 'BLOOOOOOOOOOOOOP')
